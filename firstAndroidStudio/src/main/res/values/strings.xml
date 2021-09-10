@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">First Start Android Studio</string>
     <string name="btn01">Button</string>
+    <string name="btnClean">Clean</string>
+    <string name="it_s_activity_02">it\'s Activity 02</string>
+    <string name="to_main">to main</string>
 </resources>
