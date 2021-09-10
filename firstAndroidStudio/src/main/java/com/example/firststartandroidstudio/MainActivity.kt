@@ -3,7 +3,6 @@ package com.example.firststartandroidstudio
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Typeface
-import android.opengl.GLES20
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
