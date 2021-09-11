@@ -2,6 +2,7 @@ package com.example.firststartandroidstudio
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.widget.Button
@@ -19,23 +20,27 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        title = "it's Main Activity"
 
-        tvText01 = findViewById(R.id.tvText01)
+        // Button "Click me!"
         btn01 = findViewById(R.id.btn01)
-        btnClean = findViewById(R.id.btnClean)
-        btnToActivity02 = findViewById(R.id.btnToActivity02)
-
         btn01.setOnClickListener {
             tvText01.setTypeface(null, Typeface.BOLD)
+            tvText01.setTextColor(Color.parseColor("#000000"))
             tvText01.text = "Btn01 clicked!"
         }
 
+        // Button "Clean"
+        tvText01 = findViewById(R.id.tvText01)
+        btnClean = findViewById(R.id.btnClean)
         btnClean.setOnClickListener {
             tvText01.setTypeface(null, Typeface.BOLD_ITALIC)
-            tvText01.text = "Hello world!*"
+            tvText01.setTextColor(Color.parseColor("#FF0000"))
+            tvText01.text = "Hello Kotlin!*"
         }
 
         // переход на другой Активити
+        btnToActivity02 = findViewById(R.id.btnToActivity02)
         btnToActivity02.setOnClickListener {
             val intent = Intent(this, Activity02::class.java)
             startActivity(intent)
